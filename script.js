@@ -19,8 +19,6 @@ var Modernizr=function(n,o){var r=[];n._version.split(".")[0]>2&&window.console&
 
 
 
-
-
 $(document).ready(function() {
 
 /*
@@ -29,10 +27,8 @@ $(document).ready(function() {
 */
 	Modernizr.on('webp', function (result) {
 		$('img').each(function() {
-			var img = this;
-			console.log(img);
 			if (result) {
-				$(img).attr('src',function(i,e){
+				$(this).attr('src',function(i,e){
 					return e.replace(".jpg",".webp");
 				});
 			}

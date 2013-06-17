@@ -10,18 +10,17 @@ This script offers a very easy way to detect if the browser supports WebP images
   
 ### Usage
 
-The snippet requires Modernizr with a detection of ["img-webp"](http://modernizr.com/download/#-img_webp).
+The snippet requires Modernizr with a detection of [img-webp](http://modernizr.com/download/#-img_webp).
 It also requires a feature coming in Modernizr 3.0.
 So for now we need this [prolyfill](https://github.com/stucox/modernizr-on).
 
-#### The Javascript images replacement function. (replacing .png to .webp).
+#### The Javascript images replacement function. (replacing .jpg to .webp).
 ```html
 Modernizr.on('webp', function (result) {
 	$('img').each(function() {
-		var img = this;
 		if (result) {
-			$(img).attr('src',function(i,e){
-				return e.replace(".png",".webp");
+			$(this).attr('src',function(i,e){
+				return e.replace(".jpg",".webp");
 			});
 		}
 	});

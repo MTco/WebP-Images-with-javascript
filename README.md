@@ -28,6 +28,18 @@ Modernizr.on('webp', function (result) {
 	});
 });
 ```
+And here is the same function in regular javascript.
+```html
+Modernizr.on('webp', function (result) {
+	var image = document.getElementsByTagName('img');
+	if(result) {
+		for (var i=0;i<image.length;i++) { 	
+			newimagesrc = image[i].getAttribute("src").replace('.jpg', '.webp');
+			image[i].setAttribute("src", newimagesrc);
+		}
+	}
+});
+```
   
   
 #### Help

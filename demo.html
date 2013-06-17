@@ -9,6 +9,13 @@ img {
 	width: 80%;
 	max-width: 800px;
 }
+.support:after {
+	content: "This browser doesn't support WebP images :(";
+}
+.webp .support:after {
+	content: "This is a WebP image! Hurray!"
+}
+
 </style>
 </head>
 <body>
@@ -18,6 +25,9 @@ img {
 
 
 <h1>WebP image replacement with Modernizr</h1>
+<p class="support"></p>
+
+
 <img src="images/ocean.jpg">
 
 

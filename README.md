@@ -17,7 +17,7 @@ So for now we need this [prolyfill](https://github.com/stucox/modernizr-on).
   
   
 Here is the code that replaced all images that changes all images extensions from .jpg to .webp if the browser supports it.
-```html
+```javascript
 Modernizr.on('webp', function (result) {
 	$('img').each(function() {
 		if (result) {
@@ -29,7 +29,7 @@ Modernizr.on('webp', function (result) {
 });
 ```
 And here is the same function in regular javascript.
-```html
+```javascript
 Modernizr.on('webp', function (result) {
 	var image = document.getElementsByTagName('img');
 	if(result) {

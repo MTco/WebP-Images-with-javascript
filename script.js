@@ -21,30 +21,18 @@ var Modernizr=function(n,o){var r=[];n._version.split(".")[0]>2&&window.console&
 *	WebP Images with modernizr
 *	https://github.com/vincento1/WebP-Images-with-modernizr
 */
-
-
-// jQuery version
-$(document).ready(function() {
-	Modernizr.on('webp', function (result) {
-		$('img').each(function() {
-			if (result) {
-				$(this).attr('src',function(i,e){
-					return e.replace(".jpg",".webp");
-				});
-			}
-		});
-	});
-});	
-
-
-
-// Javascript version
 Modernizr.on('webp', function (result) {
-	var image = document.getElementsByTagName('img');
-	if(result) {
-		for (var i=0;i<image.length;i++) { 	
-			newimagesrc = image[i].getAttribute("src").replace('.jpg', '.webp');
+	var img = document.getElementById('myimg');
+	if (result) {
+		for (var i=0;i<image.length;i++) { 
+			newimagesrc = img.getAttribute('data-webp');
 			image[i].setAttribute("src", newimagesrc);
-		}
+  		}
 	}
+  	else {
+  		for (var i=0;i<image.length;i++) { 
+    			newimagesrc = img.getAttribute('data-jpg');
+			image[i].setAttribute("src", newimagesrc);
+  		}
+  	}
 });

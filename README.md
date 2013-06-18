@@ -14,7 +14,7 @@ The snippet requires Modernizr with a detection of [img-webp](http://modernizr.c
 It also requires a feature coming in Modernizr 3.0.
 So for now we need this [prolyfill](https://github.com/stucox/modernizr-on).
   
-Here is the HTML, with a <noscript> fallback.
+Here is the HTML, with a noscript fallback.
 ```html
 <img data-jpg="image.jpg" data-webp="image.webp">
 <noscript><img src="image.jpg"></noscript>

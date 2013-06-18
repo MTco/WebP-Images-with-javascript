@@ -19,31 +19,25 @@ So for now we need this [prolyfill](https://github.com/stucox/modernizr-on).
 Here is the code that replaced all images that changes all images extensions from .jpg to .webp if the browser supports it.
 ```javascript
 Modernizr.on('webp', function (result) {
-	$('img').each(function() {
-		if (result) {
-			$(this).attr('src',function(i,e){
-				return e.replace(".jpg",".webp");
-			});
-		}
-	});
-});
-```
-And here is the same function in regular javascript.
-```javascript
-Modernizr.on('webp', function (result) {
-	var image = document.getElementsByTagName('img');
-	if(result) {
-		for (var i=0;i<image.length;i++) { 	
-			newimagesrc = image[i].getAttribute("src").replace('.jpg', '.webp');
+	var img = document.getElementById('myimg');
+	if (result) {
+		for (var i=0;i<image.length;i++) { 
+			newimagesrc = img.getAttribute('data-webp');
 			image[i].setAttribute("src", newimagesrc);
-		}
+  		}
 	}
+  	else {
+  		for (var i=0;i<image.length;i++) { 
+    			newimagesrc = img.getAttribute('data-jpg');
+			image[i].setAttribute("src", newimagesrc);
+  		}
+  	}
 });
 ```
   
   
 #### Help
-As you might have seen from the code above, this will replace all 'img' tags on the whole page, event if there is no webp image to replace the png with.
+As you might have seen from the code above, this will replace the image event if there is no webp image on the server to replace the png with.
 If you have a way to work around this, please let me know!
 
 #### Feedback

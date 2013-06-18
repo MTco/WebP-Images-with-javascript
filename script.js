@@ -22,17 +22,15 @@ var Modernizr=function(n,o){var r=[];n._version.split(".")[0]>2&&window.console&
 *	https://github.com/vincento1/WebP-Images-with-modernizr
 */
 Modernizr.on('webp', function (result) {
-	var img = document.getElementById('myimg');
+	var image = document.getElementsByTagName('img');
 	if (result) {
 		for (var i=0;i<image.length;i++) { 
-			newimagesrc = img.getAttribute('data-webp');
-			image[i].setAttribute("src", newimagesrc);
+			image[i].src = image[i].getAttribute('data-webp');
   		}
 	}
   	else {
   		for (var i=0;i<image.length;i++) { 
-    			newimagesrc = img.getAttribute('data-jpg');
-			image[i].setAttribute("src", newimagesrc);
+    		image[i].src = image[i].getAttribute('data-jpg');
   		}
   	}
 });

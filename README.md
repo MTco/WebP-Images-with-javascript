@@ -14,13 +14,13 @@ The snippet requires Modernizr with a detection of [img-webp](http://modernizr.c
 It also requires a feature coming in Modernizr 3.0.
 So for now we need this [prolyfill](https://github.com/stucox/modernizr-on).
   
-Here is the HTML, with a noscript fallback.
+Here is the HTML, with a <noscript> fallback.
 ```html
 <img data-jpg="image.jpg" data-webp="image.webp">
 <noscript><img src="image.jpg"></noscript>
 ```
 
-Here is the code that replaced all images that changes all images extensions from .jpg to .webp if the browser supports it.
+And here is the javascript that takes the data-info from which ever image is supported and puts it as src of the img-tag.
 ```javascript
 Modernizr.on('webp', function (result) {
 	var image = document.getElementsByTagName('img');

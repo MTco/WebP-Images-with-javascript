@@ -27,7 +27,7 @@ Modernizr.on('webp', function (result) {
 	}
   	else {
   		for (var i=0;i<image.length;i++) { 
-    			image[i].src = image[i].getAttribute('data-jpg');
+			image[i].src = image[i].getAttribute('data-jpg');
   		}
   	}
 });

@@ -8,7 +8,7 @@ WebP Images with Javascript
 This script offers a very easy way to detect if the browser supports WebP images and it replaces old images with new, sharper, faster and lighter WebP-images.
 
 ### Usage
-Here is the HTML, with a noscript fallback.
+Here is the HTML, with a `<noscript>` fallback.
 ```html
 <img data-jpg="image.jpg" data-webp="image.webp">
 <noscript><img src="image.jpg"></noscript>
@@ -37,10 +37,6 @@ image.src = 'data:image/webp;base64,UklGRiwAAABXRUJQVlA4ICAAAAAUAgCdASoBAAEAL/3+
 #### Other soultions
 This is the javascript solution. A far more easier solution is to a use the .htaccess file. Read more [here](https://github.com/vincentorback/WebP-images-with-htaccess).
 
-#### Help
-As you might see from the code above, this will replace the image even if there is no webp image on the server to replace the png with.
-If you have a way to work around this, please let me know!
-
 #### Feedback
-If you've got any thoughts or idead about this, please make an [issue](https://github.com/vincentorback/WebP-Images-with-Javascript/issues) or make a pull request!
-I'm just as interested as you in new image formats and responsive techniques.
+If you’ve got any thoughts or ideas about this, please make an [issue](https://github.com/vincentorback/WebP-images-with-javascript/issues), a [pull request](https://github.com/vincentorback/WebP-images-with-javascript/pulls) or hit me up on [Twitter](https://twitter.com/vorback)!
+I’m just as interested as you in new image formats and responsive techniques.

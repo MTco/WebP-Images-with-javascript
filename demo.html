@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>WebP image replacement with Modernizr</title>
+<title>WebP image replacement with Javascript</title>
 <style>
 body {
 	text-align: center;
@@ -11,25 +11,14 @@ img {
 	width: 80%;
 	max-width: 800px;
 }
-.support:after {
-	content: "This browser doesn't support WebP images :(";
-}
-.webp .support:after {
-	content: "This is a WebP image! Hurray!"
-}
 </style>
 </head>
 <body>
 
+<h1>WebP image replacement with Javascript</h1>
 
-
-<h1>WebP image replacement with Modernizr</h1>
-<p class="support"></p>
-
-<img data-jpg="image.jpg" data-webp="image.webp" />
+<img data-jpg="image.jpg" data-webp="image.webp">
 <noscript><img src="image.jpg"></noscript>
-
-
 
 <script src="script.js"></script>
 </body>
